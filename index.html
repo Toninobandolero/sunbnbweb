@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunbnb - Tu Hamaca en Primera Línea. Sin Estrés.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados para complementar Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1579521349995-0c75a452d242?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #008DDA; /* Un azul mediterráneo */
+            margin: 16px auto 0;
+            border-radius: 2px;
+        }
+        /* Estilos para el selector de idioma */
+        #lang-switcher button {
+             transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ========== HEADER ========== -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-900 font-playfair">Sunbnb</a>
+            <div class="flex items-center space-x-4">
+                 <div id="lang-switcher" class="flex space-x-2 border-r pr-4 mr-2">
+                    <button id="lang-es" class="font-semibold text-blue-600 border-b-2 border-blue-600 px-1">ES</button>
+                    <button id="lang-en" class="font-semibold text-gray-500 hover:text-blue-600 px-1">EN</button>
+                </div>
+                <a href="#cta-final" id="nav-book-now" class="cta-button bg-blue-600 text-white font-semibold px-5 py-2 rounded-full hover:bg-blue-700">Reservar Ahora</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-bg text-white min-h-[80vh] flex items-center">
+        <div class="container mx-auto px-6 text-center">
+            <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold font-playfair leading-tight mb-4">Tu Hamaca en Primera Línea. Sin Estrés.</h1>
+            <p id="hero-subtitle" class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200">Reserva tu sitio perfecto en la playa desde tu móvil. Llega, relájate y deja que el único problema sea decidir si quieres nadar o tomar el sol.</p>
+            <a id="hero-cta" href="#cta-final" class="cta-button bg-yellow-400 text-blue-900 font-bold px-10 py-4 rounded-full text-lg hover:bg-yellow-500">
+                Asegura tu Paraíso
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== PAIN POINTS SECTION ========== -->
+    <section id="dolor" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 id="pain-title" class="section-title text-3xl font-bold text-center text-blue-900 mb-12">Dile Adiós al Estrés de la Playa</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pain Point 1 -->
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15.5 15.5L18.5 18.5M18.5 15.5L15.5 18.5" opacity="0.5"></path></svg>
+                    <h3 id="pain1-title" class="font-bold text-lg mb-2">Incertidumbre</h3>
+                    <p id="pain1-text" class="text-gray-600">Llegar a la playa sin saber si encontrarás un buen sitio, o si quiera un sitio.</p>
+                </div>
+                <!-- Pain Point 2 -->
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" opacity="0.5"></path><path d="M12 2a1 1 0 00-1 1v7H6a1 1 0 00-.78 1.63l8 10a1 1 0 001.56 0l8-10A1 1 0 0020 11h-5V3a1 1 0 00-1-1h-2z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <h3 id="pain2-title" class="font-bold text-lg mb-2">Cargar con Todo</h3>
+                    <p id="pain2-text" class="text-gray-600">El ritual de cargar con sombrillas, sillas y toallas por la arena caliente.</p>
+                </div>
+                <!-- Pain Point 3 -->
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5h.01"></path></svg>
+                    <h3 id="pain3-title" class="font-bold text-lg mb-2">Pagar en Efectivo</h3>
+                    <p id="pain3-text" class="text-gray-600">Buscar al hamaquero y asegurarte de tener suficiente efectivo para pagar.</p>
+                </div>
+                <!-- Pain Point 4 -->
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
+                     <svg class="w-16 h-16 mx-auto mb-4 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <h3 id="pain4-title" class="font-bold text-lg mb-2">Perder el Tiempo</h3>
+                    <p id="pain4-text" class="text-gray-600">Gastar valiosos minutos de tus vacaciones en la logística en lugar de en la relajación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS SECTION ========== -->
+    <section id="como-funciona" class="py-20 bg-blue-50">
+        <div class="container mx-auto px-6">
+            <h2 id="how-title" class="section-title text-3xl font-bold text-center text-blue-900 mb-16">Relajarse Nunca Fue Tan Fácil</h2>
+            <div class="relative">
+                <!-- Línea de conexión -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-blue-200 -translate-y-1/2"></div>
+                <div class="grid md:grid-cols-3 gap-12 relative">
+                    <!-- Step 1 -->
+                    <div class="text-center">
+                        <div class="relative z-10 w-24 h-24 mx-auto mb-4 bg-white rounded-full flex items-center justify-center border-4 border-blue-500 shadow-lg">
+                            <span class="font-playfair text-4xl text-blue-500">1</span>
+                        </div>
+                        <h3 id="step1-title" class="font-bold text-xl mb-2">Elige tu Playa y tu Sitio</h3>
+                        <p id="step1-text" class="text-gray-600">Explora nuestras playas y selecciona en el mapa la hamaca exacta que quieres. ¡Sí, esa de primera línea!</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="text-center">
+                        <div class="relative z-10 w-24 h-24 mx-auto mb-4 bg-white rounded-full flex items-center justify-center border-4 border-blue-500 shadow-lg">
+                            <span class="font-playfair text-4xl text-blue-500">2</span>
+                        </div>
+                        <h3 id="step2-title" class="font-bold text-xl mb-2">Reserva y Paga Online</h3>
+                        <p id="step2-text" class="text-gray-600">Añade tu set de hamacas al carrito y paga de forma rápida y segura con tu tarjeta. Recibirás una confirmación al instante.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="text-center">
+                         <div class="relative z-10 w-24 h-24 mx-auto mb-4 bg-white rounded-full flex items-center justify-center border-4 border-blue-500 shadow-lg">
+                            <span class="font-playfair text-4xl text-blue-500">3</span>
+                        </div>
+                        <h3 id="step3-title" class="font-bold text-xl mb-2">Llega, Muestra tu Código y Disfruta</h3>
+                        <p id="step3-text" class="text-gray-600">Al llegar, simplemente muestra el código de tu reserva a nuestro personal. Tu sitio te estará esperando. Así de fácil.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========== FOR BUSINESS SECTION ========== -->
+    <section id="para-negocios" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 id="business-title" class="section-title text-3xl font-bold text-blue-900 mb-4">Optimiza tu Negocio de Playa</h2>
+            <p id="business-subtitle" class="max-w-3xl mx-auto text-lg text-gray-700 mb-12">Asóciate con Sunbnb y transforma tu operativa. Menos gestión, más ingresos y clientes más felices.</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Beneficio 1 -->
+                <div class="p-6">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-9.75M15 15l-6-6m0 0l-6.75 6.75" /></svg>
+                    <h3 id="benefit1-title" class="font-bold text-lg mb-2">Maximiza tus Ingresos</h3>
+                    <p id="benefit1-text" class="text-gray-600">Asegura reservas anticipadas y reduce las hamacas vacías en horas punta. Ingresos predecibles incluso antes de abrir.</p>
+                </div>
+                <!-- Beneficio 2 -->
+                <div class="p-6">
+                     <svg class="w-16 h-16 mx-auto mb-4 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <h3 id="benefit2-title" class="font-bold text-lg mb-2">Reduce la Gestión</h3>
+                    <p id="benefit2-text" class="text-gray-600">Automatiza las reservas y los pagos. Tu personal se centra en dar un gran servicio, no en gestionar cobros o buscar clientes.</p>
+                </div>
+                <!-- Beneficio 3 -->
+                <div class="p-6">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                    <h3 id="benefit3-title" class="font-bold text-lg mb-2">Atrae Clientes Modernos</h3>
+                    <p id="benefit3-text" class="text-gray-600">Ofrece una experiencia de reserva digital y sin fricciones que los turistas y clientes locales demandan y valoran.</p>
+                </div>
+                <!-- Beneficio 4 -->
+                <div class="p-6">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h12M3.75 3h16.5M3.75 3v1.5M16.5 3v1.5M12 16.5h3.75m-3.75 0V18m0-1.5V15m3.75 1.5V18m0-1.5V15M3 16.5h12M3 16.5v1.5M12 16.5v1.5" /></svg>
+                    <h3 id="benefit4-title" class="font-bold text-lg mb-2">Datos para Crecer</h3>
+                    <p id="benefit4-text" class="text-gray-600">Accede a estadísticas sobre tus horas de mayor demanda, ocupación y tipos de cliente para tomar mejores decisiones.</p>
+                </div>
+            </div>
+             <a href="#contacto" id="business-cta" class="cta-button mt-12 inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-700">Conviértete en Socio</a>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section id="testimonios" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 id="testimonials-title" class="section-title text-3xl font-bold text-center text-blue-900 mb-12">No te fíes de nosotros, fíjate en ellos</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <p id="testimonial1-text" class="text-gray-700 italic mb-4">"¡La mejor idea! Se acabaron las carreras matutinas para coger sitio. Llegamos, enseñamos el móvil y a disfrutar. ¡Repetiremos seguro!"</p>
+                    <div class="flex items-center">
+                        <div class="text-yellow-400">★★★★★</div>
+                        <p id="testimonial1-author" class="font-bold ml-4">- Familia García</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <p id="testimonial2-text" class="text-gray-700 italic mb-4">"El servicio es un 10. Reservé desde el hotel mientras desayunaba. Es la definición de vacaciones sin estrés. Muy recomendable."</p>
+                    <div class="flex items-center">
+                        <div class="text-yellow-400">★★★★★</div>
+                        <p id="testimonial2-author" class="font-bold ml-4">- Marta S.</p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <p id="testimonial3-text" class="text-gray-700 italic mb-4">"Súper fácil de usar y el personal en la playa muy amable. Poder elegir la hamaca exacta en el mapa es un detalle genial. Volveré."</p>
+                    <div class="flex items-center">
+                        <div class="text-yellow-400">★★★★★</div>
+                        <p id="testimonial3-author" class="font-bold ml-4">- David R.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FINAL CTA SECTION ========== -->
+    <section id="cta-final" class="py-24 bg-blue-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 id="final-cta-title" class="text-4xl font-bold font-playfair mb-4">¿Listo para tu día de playa perfecto?</h2>
+            <p id="final-cta-subtitle" class="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-blue-200">Tu hamaca en la Costa del Sol te está esperando. A un solo clic de distancia.</p>
+            <a id="final-cta-button" href="#cta-final" class="cta-button bg-yellow-400 text-blue-900 font-bold px-10 py-4 rounded-full text-lg hover:bg-yellow-500">
+                Reservar Mi Hamaca Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-blue-900 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="md:flex md:justify-between items-center text-center md:text-left">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold font-playfair">Sunbnb</h3>
+                    <p id="footer-slogan" class="text-blue-300">Reinventando tu día de playa.</p>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a id="footer-about" href="#" class="text-blue-300 hover:text-white">Sobre Nosotros</a>
+                    <a id="footer-contact" href="#" class="text-blue-300 hover:text-white">Contacto</a>
+                    <a id="footer-terms" href="#" class="text-blue-300 hover:text-white">Términos y Condiciones</a>
+                </div>
+            </div>
+            <hr class="my-6 border-blue-800"/>
+            <div id="footer-copyright" class="text-center text-blue-300 text-sm">
+                © 2025 Sunbnb España SL. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- SCRIPT DE TRADUCCIÓN ---
+
+        // 1. Objeto con todas las traducciones
+        const translations = {
+            es: {
+                'nav-book-now': 'Reservar Ahora',
+                'hero-title': 'Tu Hamaca en Primera Línea. Sin Estrés.',
+                'hero-subtitle': 'Reserva tu sitio perfecto en la playa desde tu móvil. Llega, relájate y deja que el único problema sea decidir si quieres nadar o tomar el sol.',
+                'hero-cta': 'Asegura tu Paraíso',
+                'pain-title': 'Dile Adiós al Estrés de la Playa',
+                'pain1-title': 'Incertidumbre',
+                'pain1-text': 'Llegar a la playa sin saber si encontrarás un buen sitio, o si quiera un sitio.',
+                'pain2-title': 'Cargar con Todo',
+                'pain2-text': 'El ritual de cargar con sombrillas, sillas y toallas por la arena caliente.',
+                'pain3-title': 'Pagar en Efectivo',
+                'pain3-text': 'Buscar al hamaquero y asegurarte de tener suficiente efectivo para pagar.',
+                'pain4-title': 'Perder el Tiempo',
+                'pain4-text': 'Gastar valiosos minutos de tus vacaciones en la logística en lugar de en la relajación.',
+                'how-title': 'Relajarse Nunca Fue Tan Fácil',
+                'step1-title': 'Elige tu Playa y tu Sitio',
+                'step1-text': 'Explora nuestras playas y selecciona en el mapa la hamaca exacta que quieres. ¡Sí, esa de primera línea!',
+                'step2-title': 'Reserva y Paga Online',
+                'step2-text': 'Añade tu set de hamacas al carrito y paga de forma rápida y segura con tu tarjeta. Recibirás una confirmación al instante.',
+                'step3-title': 'Llega, Muestra tu Código y Disfruta',
+                'step3-text': 'Al llegar, simplemente muestra el código de tu reserva a nuestro personal. Tu sitio te estará esperando. Así de fácil.',
+                'business-title': 'Optimiza tu Negocio de Playa',
+                'business-subtitle': 'Asóciate con Sunbnb y transforma tu operativa. Menos gestión, más ingresos y clientes más felices.',
+                'benefit1-title': 'Maximiza tus Ingresos',
+                'benefit1-text': 'Asegura reservas anticipadas y reduce las hamacas vacías en horas punta. Ingresos predecibles incluso antes de abrir.',
+                'benefit2-title': 'Reduce la Gestión',
+                'benefit2-text': 'Automatiza las reservas y los pagos. Tu personal se centra en dar un gran servicio, no en gestionar cobros o buscar clientes.',
+                'benefit3-title': 'Atrae Clientes Modernos',
+                'benefit3-text': 'Ofrece una experiencia de reserva digital y sin fricciones que los turistas y clientes locales demandan y valoran.',
+                'benefit4-title': 'Datos para Crecer',
+                'benefit4-text': 'Accede a estadísticas sobre tus horas de mayor demanda, ocupación y tipos de cliente para tomar mejores decisiones.',
+                'business-cta': 'Conviértete en Socio',
+                'testimonials-title': 'No te fíes de nosotros, fíjate en ellos',
+                'testimonial1-text': '"¡La mejor idea! Se acabaron las carreras matutinas para coger sitio. Llegamos, enseñamos el móvil y a disfrutar. ¡Repetiremos seguro!"',
+                'testimonial1-author': '- Familia García',
+                'testimonial2-text': '"El servicio es un 10. Reservé desde el hotel mientras desayunaba. Es la definición de vacaciones sin estrés. Muy recomendable."',
+                'testimonial2-author': '- Marta S.',
+                'testimonial3-text': '"Súper fácil de usar y el personal en la playa muy amable. Poder elegir la hamaca exacta en el mapa es un detalle genial. Volveré."',
+                'testimonial3-author': '- David R.',
+                'final-cta-title': '¿Listo para tu día de playa perfecto?',
+                'final-cta-subtitle': 'Tu hamaca en la Costa del Sol te está esperando. A un solo clic de distancia.',
+                'final-cta-button': 'Reservar Mi Hamaca Ahora',
+                'footer-slogan': 'Reinventando tu día de playa.',
+                'footer-about': 'Sobre Nosotros',
+                'footer-contact': 'Contacto',
+                'footer-terms': 'Términos y Condiciones',
+                'footer-copyright': '© 2025 Sunbnb España SL. Todos los derechos reservados.'
+            },
+            en: {
+                'nav-book-now': 'Book Now',
+                'hero-title': 'Your Front-Row Sunbed. Stress-Free.',
+                'hero-subtitle': 'Book your perfect spot on the beach from your phone. Arrive, relax, and let your only worry be whether to swim or sunbathe.',
+                'hero-cta': 'Secure Your Paradise',
+                'pain-title': 'Say Goodbye to Beach Stress',
+                'pain1-title': 'Uncertainty',
+                'pain1-text': 'Arriving at the beach not knowing if you\'ll find a good spot, or any spot at all.',
+                'pain2-title': 'Carrying Everything',
+                'pain2-text': 'The ritual of lugging umbrellas, chairs, and towels across the hot sand.',
+                'pain3-title': 'Paying in Cash',
+                'pain3-text': 'Hunting for the attendant and making sure you have enough cash to pay.',
+                'pain4-title': 'Wasting Time',
+                'pain4-text': 'Spending valuable vacation minutes on logistics instead of relaxation.',
+                'how-title': 'Relaxing Has Never Been Easier',
+                'step1-title': 'Choose Your Beach & Spot',
+                'step1-text': 'Explore our beaches and select the exact sunbed you want on the map. Yes, that front-row one!',
+                'step2-title': 'Book & Pay Online',
+                'step2-text': 'Add your sunbed set to the cart and pay quickly and securely with your card. You\'ll receive an instant confirmation.',
+                'step3-title': 'Arrive, Show Your Code & Enjoy',
+                'step3-text': 'Upon arrival, simply show your reservation code to our staff. Your spot will be waiting for you. It\'s that easy.',
+                'business-title': 'Optimize Your Beach Business',
+                'business-subtitle': 'Partner with Sunbnb and transform your operations. Less management, more revenue, and happier customers.',
+                'benefit1-title': 'Maximize Your Revenue',
+                'benefit1-text': 'Secure advance bookings and reduce empty sunbeds during peak hours. Predictable income even before you open.',
+                'benefit2-title': 'Reduce Management',
+                'benefit2-text': 'Automate bookings and payments. Your staff can focus on providing great service, not handling cash or chasing clients.',
+                'benefit3-title': 'Attract Modern Customers',
+                'benefit3-text': 'Offer a seamless digital booking experience that tourists and local customers demand and appreciate.',
+                'benefit4-title': 'Data to Grow',
+                'benefit4-text': 'Access statistics on your peak hours, occupancy, and customer types to make smarter business decisions.',
+                'business-cta': 'Become a Partner',
+                'testimonials-title': 'Don\'t Take Our Word For It, See What They Say',
+                'testimonial1-text': '"The best idea! The morning rush to get a spot is over. We arrived, showed our phone, and started enjoying. We will definitely be back!"',
+                'testimonial1-author': '- The Garcia Family',
+                'testimonial2-text': '"The service is a 10/10. I booked from my hotel while having breakfast. It\'s the definition of a stress-free vacation. Highly recommended."',
+                'testimonial2-author': '- Martha S.',
+                'testimonial3-text': '"Super easy to use and the beach staff were very friendly. Being able to choose the exact sunbed on the map is a great feature. I\'ll be back."',
+                'testimonial3-author': '- David R.',
+                'final-cta-title': 'Ready for Your Perfect Beach Day?',
+                'final-cta-subtitle': 'Your sunbed on the Costa del Sol is waiting for you. Just one click away.',
+                'final-cta-button': 'Book My Sunbed Now',
+                'footer-slogan': 'Reinventing your beach day.',
+                'footer-about': 'About Us',
+                'footer-contact': 'Contact',
+                'footer-terms': 'Terms & Conditions',
+                'footer-copyright': '© 2025 Sunbnb España SL. All rights reserved.'
+            }
+        };
+
+        // 2. Función para cambiar el idioma
+        const setLanguage = (lang) => {
+            // Actualizar el texto
+            Object.keys(translations[lang]).forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerHTML = translations[lang][id];
+                }
+            });
+
+            // Actualizar los estilos de los botones
+            const esButton = document.getElementById('lang-es');
+            const enButton = document.getElementById('lang-en');
+            if (lang === 'es') {
+                esButton.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+                esButton.classList.remove('text-gray-500', 'hover:text-blue-600');
+                enButton.classList.add('text-gray-500', 'hover:text-blue-600');
+                enButton.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                document.documentElement.lang = 'es';
+            } else {
+                enButton.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+                enButton.classList.remove('text-gray-500', 'hover:text-blue-600');
+                esButton.classList.add('text-gray-500', 'hover:text-blue-600');
+                esButton.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                document.documentElement.lang = 'en';
+            }
+        };
+
+        // 3. Añadir los 'event listeners' a los botones cuando el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('lang-es').addEventListener('click', () => setLanguage('es'));
+            document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+        });
+    </script>
+
+</body>
+</html>
